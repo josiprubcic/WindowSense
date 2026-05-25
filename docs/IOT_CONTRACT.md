@@ -1,6 +1,6 @@
 # WindowSense IoT ugovor
 
-Ovaj dokument definira podatke koje ESP32 i web backend razmjenjuju u MVP fazi.
+Ovaj dokument definira podatke koje ESP32 i Spring Boot web backend razmjenjuju u MVP fazi.
 
 ## Telemetry keys
 

@@ -6,18 +6,18 @@ Projekt je postavljen kao backend + frontend MVP spreman za kasnije spajanje na 
 
 ## Sto je implementirano
 
-- Node.js backend bez vanjskih dependencyja.
+- Java 21 + Spring Boot backend.
 - REST API za telemetriju, prognozu, komande, pragove automatizacije i ESP32 command polling.
 - Server-Sent Events stream za live dashboard.
 - ThingsBoard HTTP Device API adapter za slanje telemetrije.
 - Web dashboard za nadzor prozora, roleta, kise, svjetlosti, prognoze, pravila i IoT statusa.
 - Simulacijski panel za testiranje automatizacije bez fizickog hardvera.
-- Testovi za automatizacijska pravila i glavne API tokove.
+- Spring testovi za automatizacijska pravila i glavne API tokove.
 
 ## Pokretanje
 
 ```bash
-npm start
+mvn spring-boot:run
 ```
 
 Otvoriti:
@@ -26,21 +26,21 @@ Otvoriti:
 http://localhost:3000
 ```
 
-Za razvoj s automatskim restartom Node procesa:
+Build JAR datoteke:
 
 ```bash
-npm run dev
+mvn package
 ```
 
 Testovi:
 
 ```bash
-npm test
+mvn test
 ```
 
 ## Konfiguracija
 
-Kopirati `.env.example` u `.env` ako se zeli koristiti lokalna konfiguracija. Aplikacija ne ucitava `.env` automatski jer nema vanjskih paketa; vrijednosti se mogu izvesti u shellu prije pokretanja:
+Spring Boot cita environment varijable direktno. Primjer lokalnog pokretanja:
 
 ```bash
 export PORT=3000
@@ -48,7 +48,7 @@ export THINGSBOARD_HOST=https://thingsboard.cloud
 export THINGSBOARD_ACCESS_TOKEN=DEVICE_ACCESS_TOKEN
 export THINGSBOARD_SYNC_ENABLED=true
 export WINDOWSENSE_DEVICE_ID=windowsense-esp32-01
-npm start
+mvn spring-boot:run
 ```
 
 Ako ThingsBoard nije konfiguriran, web app i dalje radi lokalno sa simuliranim stanjem.

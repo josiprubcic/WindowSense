@@ -5,7 +5,7 @@ Ovo je kratki plan nastavka nakon trenutnog MVP-a.
 ## MVP koji je sada spreman
 
 - Web dashboard za nadzor senzora, prozora, roleta, automatizacije i IoT statusa.
-- Backend REST API za telemetriju, komande, pragove i stanje sustava.
+- Spring Boot REST API za telemetriju, komande, pragove i stanje sustava.
 - Server-Sent Events za live prikaz bez refreshanja.
 - Lokalni command queue za ESP32 demonstraciju.
 - ThingsBoard HTTP Device API adapter za slanje telemetrije.
@@ -33,6 +33,9 @@ Ovo je kratki plan nastavka nakon trenutnog MVP-a.
 
 7. Pripremiti deploy.
    Dodati Dockerfile, healthcheck, reverse proxy upute i produkcijske environment varijable.
+
+8. Dodati Spring profile.
+   `dev` profil moze koristiti simulirano stanje i lokalni ThingsBoard, a `prod` profil produkcijske tajne i stabilniji logging.
 
 ## Predlozena demo skripta
 
