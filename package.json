@@ -1,0 +1,15 @@
+{
+  "name": "windowsense",
+  "version": "0.1.0",
+  "description": "WindowSense web app for automatic window and blinds control with ThingsBoard-ready IoT integration.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
